@@ -1,0 +1,51 @@
+Execution context is a concept in JavaScript that helps manage the execution of code. It represents the environment in which JavaScript code is executed, including the variables, functions, and scope chains available at a particular point during code execution. Each time a function is invoked or code is executed, a new execution context is created.
+
+There are three types of execution contexts in JavaScript:
+
+Global Execution Context:
+
+The global execution context is the default and outermost context.
+It represents the environment where the global scope and global variables are defined.
+It is created when the script starts executing.
+There is only one global execution context in a JavaScript program.
+Function Execution Context:
+
+Function execution contexts are created when a function is called.
+Each function has its own execution context.
+It includes the function's local variables, function arguments, and references to its outer environment (lexical scope).
+When a function is invoked, a new function execution context is created and pushed onto the execution stack.
+Eval Execution Context:
+
+The eval() function creates an execution context called the eval execution context.
+It represents the execution context for code evaluated by the eval() function.
+Note: The use of eval() is discouraged due to security and performance concerns.
+Execution Stack (Call Stack):
+
+Execution contexts are managed in a stack-like data structure known as the "execution stack" or "call stack".
+The execution stack follows the Last-In-First-Out (LIFO) principle.
+When a function is called, its execution context is pushed onto the stack. When the function completes, its execution context is popped from the stack.
+This stack-like behavior allows JavaScript to keep track of nested function calls and maintain the order of execution.
+Diagram:
+
+sql
+Execution Stack (Call Stack)
+--------------------------
+|                      |
+|   Function Context   |
+|   (Inner Function)   |
+|----------------------|
+|   Function Context   |
+|   (Outer Function)   |
+|----------------------|
+|  Global Execution   |
+|       Context        |
+|----------------------|
+In the diagram above, the execution stack contains a global execution context and two nested function execution contexts. The inner function execution context is on top of the outer function execution context, which is on top of the global execution context.
+
+Each execution context stores variables, function declarations, and other execution-related information needed to run the code. It also maintains a reference to its outer environment, allowing access to variables and functions in the outer scopes.
+
+As the JavaScript engine executes code, it operates on the current execution context, and when a function is called, a new execution context is created and added to the stack.
+
+When a function completes its execution, its execution context is removed from the stack, and the JavaScript engine continues with the previous execution context.
+
+This mechanism allows JavaScript to handle function calls, manage scope, and maintain the order of execution in a predictable manner.
