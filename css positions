@@ -1,1 +1,77 @@
+1 Static Position:
+The default position value is static, where elements are positioned according to the normal flow of the document.
+Elements with static position are not affected by the top, bottom, left, or right properties.
+html code
+
+<div class="static-position">Static Position</div>
+css code
+.static-position {
+  position: static;
+}
+
+
+2 Fixed Position:
+Elements with fixed position are positioned relative to the browser window, regardless of scrolling.
+The fixed element remains fixed at a specified position even when the page is scrolled.
+html code
+<div class="fixed-position">Fixed Position</div>
+css code
+.fixed-position {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+3 Sticky Position:
+Elements with sticky position are positioned based on the user's scroll position.
+The sticky element behaves like a relatively positioned element until it reaches a specific scroll position, then it becomes fixed.
+html code
+<div class="sticky-position">Sticky Position</div>
+css code
+
+.sticky-position {
+  position: sticky;
+  top: 20px;
+}
+
+4 Relative Position:
+Elements with relative position are positioned relative to their normal position.
+Relative positioning allows elements to be shifted from their default position, while still taking up space in the normal flow.
+html
+Copy code
+<div class="relative-position">Relative Position</div>
+css
+Copy code
+.relative-position {
+  position: relative;
+  left: 50px;
+  top: 20px;
+}
+5 Absolute Position:
+
+Elements with absolute position are positioned relative to their closest positioned ancestor (if any), or the document body if no positioned ancestor is found.
+Absolute positioned elements are taken out of the normal flow, and other elements ignore them.
+html code
+
+<div class="parent">
+  <div class="absolute-position">Absolute Position</div>
+</div>
+css code
+.parent {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.absolute-position {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+In the above examples, each position is applied to a <div> element with a specific class name. The CSS styles the respective class with the desired position value and additional properties, such as top, left, or other positioning properties to control the element's placement on the page.
+
+
+
+
+
 
